@@ -1,0 +1,75 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /var/www/vuejs-jwt-laravel
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git show :.env.example
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git show :.env
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :resources/js/bootstrap.js
+> git show :.env
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :app/Http/Controllers/AuthController.php
+> git show :.env
+> git show :app/Http/Controllers/AuthController.php
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :resources/js/helpers/auth.js
+> git ls-files --stage -- resources/js/helpers/
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :resources/js/components/auth/Login.vue
+> git ls-files --stage -- resources/js/components/auth/
+> git check-ignore -z --stdin
+> git show :resources/js/components/Header.vue
+> git show :resources/js/components/auth/Login.vue
+> git ls-files --stage -- resources/js/components/auth/
+> git show :resources/js/store.js
+> git show :resources/js/components/auth/Login.vue
+> git ls-files --stage -- resources/js/components/auth/
+> git show :resources/js/store.js
+> git show :resources/js/components/auth/Login.vue
+> git ls-files --stage -- resources/js/components/auth/
+> git show :resources/js/store.js
+> git show :resources/js/routes.js
+> git show :resources/js/components/auth/Login.vue
+> git ls-files --stage -- resources/js/components/auth/
+> git show :resources/js/routes.js
+> git show :resources/js/app.js
+> git show :resources/js/store.js
+> git show :resources/js/app.js
+> git show :resources/js/helpers/auth.js
+> git ls-files --stage -- resources/js/helpers/
+> git show :resources/js/store.js
+> git show :resources/js/components/auth/Login.vue
+> git ls-files --stage -- resources/js/components/auth/
+> git show :resources/js/app.js
+> git show :resources/js/store.js
+> git show :resources/js/components/auth/Login.vue
+> git ls-files --stage -- resources/js/components/auth/
+> git show :resources/js/routes.js
+> git show :resources/js/helpers/auth.js
+> git ls-files --stage -- resources/js/helpers/
+> git show :resources/js/store.js
+> git show :resources/js/components/auth/Login.vue
+> git ls-files --stage -- resources/js/components/auth/
+> git show :resources/js/routes.js
+> git show :resources/js/components/auth/Login.vue
+> git ls-files --stage -- resources/js/components/auth/
+> git check-ignore -z --stdin
+> git show :routes/web.php
+> git show :resources/js/helpers/auth.js
+> git ls-files --stage -- resources/js/helpers/
