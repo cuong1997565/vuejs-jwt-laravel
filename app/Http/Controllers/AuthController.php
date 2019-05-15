@@ -1,15 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Controller;
-use App\User;
-
 class AuthController extends Controller
 {
-     /**
+    /**
      * Create a new AuthController instance.
      *
      * @return void
@@ -18,22 +12,19 @@ class AuthController extends Controller
     {
         $this->middleware('auth:api', ['except' => ['login']]);
     }
-
     /**
      * Get a JWT via given credentials.
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function login(Request $request)
-    {   
+    public function login()
+    {
         $credentials = request(['email', 'password']);
         if (! $token = auth('api')->attempt($credentials)) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
-
         return $this->respondWithToken($token);
     }
-
     /**
      * Get the authenticated User.
      *
@@ -43,7 +34,6 @@ class AuthController extends Controller
     {
         return response()->json(auth('api')->user());
     }
-
     /**
      * Log the user out (Invalidate the token).
      *
@@ -52,10 +42,8 @@ class AuthController extends Controller
     public function logout()
     {
         auth('api')->logout();
-
         return response()->json(['message' => 'Successfully logged out']);
     }
-
     /**
      * Refresh a token.
      *
@@ -63,9 +51,8 @@ class AuthController extends Controller
      */
     public function refresh()
     {
-        return $this->respondWithToken(auth()->refresh());
+        return $this->respondWithToken(auth('api')->refresh());
     }
-
     /**
      * Get the token array structure.
      *
@@ -82,9 +69,7 @@ class AuthController extends Controller
             'expires_in' => auth('api')->factory()->getTTL() * 60
         ]);
     }
-
-    public function guard () 
-    {
-    	return Auth::Guard('api');
+    public function guard() {
+        return \Auth::Guard('api');
     }
 }
